@@ -4,16 +4,18 @@ using namespace std;
 
 int findvalue(int b, int n1,int n2){
     int sum=0;
-    int c=0;
+    int bro=0;
     int p=1;
-    while (n1>0 || n2>0 || c>0)
+    while (n2>0)
     {
         int r1 =n1%10;
         int r2 =n2%10;
         n1=n1/10;
         n2=n2/10;
-        int d=(r2-r1)+c;
-        c=d/b;
+        int d=0;
+        int d2=d2+bro;
+        
+        d=(r2+bro)-r1;
         d=d%b;
         sum +=d*p;
         p=p*10;
