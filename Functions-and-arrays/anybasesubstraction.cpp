@@ -8,15 +8,21 @@ int findvalue(int b, int n1,int n2){
     int p=1;
     while (n2>0)
     {
-        int r1 =n1%10;
-        int r2 =n2%10;
+        int d1 =n1%10;
+        int d2 =n2%10;
         n1=n1/10;
         n2=n2/10;
+       
         int d=0;
-        int d2=d2+bro;
-        
-        d=(r2+bro)-r1;
-        d=d%b;
+        d2=d2+bro;
+        if(d2>=d1){
+            bro=0;
+            d=d2-d1;
+        }
+        else{
+            bro=-1;
+            d=d2+b-d1;
+        }
         sum +=d*p;
         p=p*10;
     }
