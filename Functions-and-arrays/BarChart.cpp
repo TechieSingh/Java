@@ -2,38 +2,28 @@
 using namespace std;
 
 void barChart(int arr[], int n){
-    int max=0;
-    int sp=0;
-    int str=0;
-    int count =1;
-    
+    int max=arr[0];
     for (int i = 0; i < n; i++)
     {
-        while (arr[i]>max)
+        if (arr[i]>max)
         {
             max=arr[i];
-            count++;
-        }
-        
+        }  
     }
-
-    for (int i = 0; i < max; i++)
+    for (int floor = max; floor>=1; floor--)
     {
-       for (int j = 0; j < n; j++)
+       for (int i = 0; i<n; i++)
        {
-           if(j==count)
+           if(arr[i]>=floor)
            {
-            cout<<"*";
+               cout<<"*\t";
            }
-           else
-           cout<<"-";
-           
+           else{
+                cout<<"\t";
+           }  
        }
        cout<<endl;
-       
-    }
-    
-
+    }   
 }
 
 int main()
